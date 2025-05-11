@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PerkView</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+</head>
+
+<body>
+
+    <!----------- Header ----------->
+
+    <header class="header">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="images/logo.png" alt="Brand Logo" class="logo-image">
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="nav-menu">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Categories</a>
+                <a href="#" class="nav-link">Leaderboard</a>
+                <a href="#" class="nav-link">Rewards</a>
+                <a href="upload.html" class="nav-link">Upload Video</a>
+            </nav>
+
+            <!-- Search -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search videos..." class="search-input">
+                <button class="search-button">Search</button>
+            </div>
+
+            <!-- User Options -->
+            <div class="user-options">
+                <a href="sign-in.html">
+                <button class="sign-button" id="signInButton">Sign In / Sign Up</button>
+                </a>
+                <div class="logged-in-state" id="loggedInState" style="display: none;">
+                    <span class="points">Points: 1200</span>
+                    <img src="user-avatar.png" alt="User Avatar" class="avatar-image">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <!-- Headline and CTA -->
+            <div class="text-content-main">
+                <h1 class="hero-title">Start Watching and Earning Today!</h1>
+                <p class="hero-subtitle">Explore our library and earn rewards while enjoying your favorite videos.</p>
+                <div class="cta-buttons">
+                    <a href="catogery.html"><button class="cta-button watch-now">Watch Now</button></a>
+                    <a href="sign-up.html"><button class="cta-button sign-up">Sign Up to Earn Rewards</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!----------- Video-Section ----------->
+
+    <section id="video-sections">
+        <!-- Trending Videos Section -->
+        <div class="section trending-videos">
+            <h2>Trending Videos</h2>
+            <div class="video-grid">
+                <!-- Trending Video 1 -->
+                <div class="video-thumbnail">
+                    <img src="video1-thumbnail.jpg" alt="Video Title">
+                    <div class="info">
+                        <h3>Video Title</h3>
+                        <p>Views: 123K</p>
+                        <button class="watch-btn">Watch Now</button>
+                    </div>
+                </div>
+                <!-- More video thumbnails can go here -->
+            </div>
+        </div>
+
+        <!-- Top Earners/Leaderboard Section -->
+        <div class="section top-earners">
+            <h2>Top Earners</h2>
+            <div class="leaderboard">
+                <!-- Top Earner 1 -->
+                <div class="user-profile">
+                    <img src="user-avatar1.jpg" alt="User 1">
+                    <p>User 1</p>
+                    <p class="points">Points: 2000</p>
+                </div>
+                <!-- More top earners can go here -->
+            </div>
+        </div>
+
+        <!-- Newly Uploaded Section -->
+        <div class="section newly-uploaded">
+            <h2>Newly Uploaded</h2>
+            <div class="video-grid">
+                <!-- New Upload 1 -->
+                <div class="video-thumbnail">
+                    <img src="new-upload1.jpg" alt="New Video">
+                    <div class="info">
+                        <h3>New Video Title</h3>
+                        <p>Uploaded: 2 hours ago</p>
+                    </div>
+                </div>
+                <!-- More new uploads can go here -->
+            </div>
+            <button class="see-more">See More</button>
+        </div>
+    </section>
+
+    <!----------- Gamification and Incentives Section ----------->
+    <section id="gamification-incentives" class="section">
+        <center>
+            <h2 class="section-title">Daily Incentives</h2>
+        </center>
+    
+        <!-- Daily Rewards Section -->
+        <div class="daily-rewards">
+            <center>
+                <h3 class="section-subtitle">Daily Rewards</h3>
+            </center>
+            <p class="reward-description">Log in daily for 5 days to earn bonus points.</p>
+            <div class="progress-tracker">
+                <p class="reward-points">Reward Points: 100</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 40%;"></div>
+                </div>
+            </div>
+            <button class="start-challenge claim-btn" onclick="startChallenge()">Start Now</button>
+            <button class="track-progress claim-btn" style="display: none;" onclick="trackProgress()">Track Progress</button>
+            <button class="claim-btn" style="display: none;" onclick="claimReward()">Claim Now</button>
+        </div>
+    
+        <!-- Challenges or Contests Section (Same as Daily Rewards) -->
+        <div class="challenges-contests">
+            <div class="challenge-cards">
+                <!-- Challenge 1 -->
+                <div class="challenge-card">
+                    <h3 class="section-subtitle">Challenges & Contests</h3>
+                    <h4 class="topic">Challenges & Contests</h4>     
+                    <p class="challenge-task">Watch 5 videos today to earn 50 bonus points.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%;"></div>
+                        </div>
+                        <div class="loading-bar" style="display: none;"></div>
+                    </div>
+                    <button class="start-challenge claim-btn" onclick="startChallenge()">Start Now</button>
+                    <button class="track-progress claim-btn" style="display: none;" onclick="trackProgress()">Track Progress</button>
+                    <button class="claim-btn" style="display: none;" onclick="claimReward()">Claim Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+      
+
+
+            <!------------- Footer ------------->
+            <footer class="footer">
+                <div class="footer-container">
+                    <!-- Quick Links -->
+                    <div class="footer-column links-column">
+                        <h3>Quick Links</h3>
+                        <ul class="quick-links">
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#faqs">FAQs</a></li>
+                            <li><a href="#privacy">Privacy Policy</a></li>
+                            <li><a href="#terms">Terms of Service</a></li>
+                        </ul>
+                    </div>
+            
+                    <!-- Newsletter Signup -->
+                    <div class="footer-column newsletter-column">
+                        <h3>Subscribe</h3>
+                        <p>Get updates and exclusive rewards delivered to your inbox.</p>
+                        <input type="email" placeholder="Enter your email" class="newsletter-input">
+                        <button class="newsletter-button">Subscribe</button>
+                    </div>
+                </div>
+            
+                <div class="footer-divider"></div>
+                <p class="footer-text">&copy; <span id="year"></span> PerkView. All Rights Reserved.</p>
+            </footer>
+            
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>

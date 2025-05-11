@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel Dashboard - PerkView</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="admin-main">
+        <!-- Sidebar -->
+        <aside class="sidebar-main">
+            <div class="sidebar-header-main">
+                <h2>PerkView Admin</h2>
+            </div>
+            <nav class="sidebar-nav-main">
+                <ul>
+                    <li><a href="dashboard.html" class="nav-item-main" id="overview-nav-main">Overview</a></li>
+                    <li><a href="#" class="nav-item-main" id="user-management-nav-main">User Management</a></li>
+                    <li><a href="#" class="nav-item-main" id="video-management-nav-main">Video Management</a></li>
+                    <li><a href="#" class="nav-item-main" id="rewards-management-nav-main">Rewards & Gamification</a></li>
+                    <li><a href="#" class="nav-item-main" id="ads-management-nav-main">Advertisement Management</a></li>
+                    <li><a href="#" class="nav-item-main" id="content-moderation-nav-main">Content Moderation</a></li>
+                    <li><a href="#" class="nav-item-main" id="platform-settings-nav-main">Platform Settings</a></li>
+                    <li><a href="#" class="nav-item-main" id="analytics-reports-nav-main">Analytics & Reports</a></li>
+                    <li><a href="#" class="nav-item-main" id="notifications-nav-main">Notifications & Alerts</a></li>
+                    <li><a href="#" class="nav-item-main" id="feedback-support-nav-main">Feedback & Support</a></li>
+                    <li><a href="#" class="nav-item-main" id="system-health-nav-main">System Health & Security</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content-main">
+            <!-- Quick Stats Section -->
+            <section class="quick-stats-main">
+                <h2>Quick Stats</h2>
+                <div class="stats-cards-main">
+                    <div class="stat-card-main">
+                        <h3>Total Users</h3>
+                        <p id="total-users-main">--</p>
+                    </div>
+                    <div class="stat-card-main">
+                        <h3>Total Videos</h3>
+                        <p id="total-videos-main">--</p>
+                    </div>
+                    <div class="stat-card-main">
+                        <h3>Active Users (Today)</h3>
+                        <p id="active-users-main">--</p>
+                    </div>
+                    <div class="stat-card-main">
+                        <h3>Total Revenue</h3>
+                        <p id="total-revenue-main">--</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Activity Section -->
+            <section class="recent-activity-main">
+                <h3>Recent Activity</h3>
+                <ul id="recent-activity-list-main">
+                    <li>New user registered: <span id="new-user-main">--</span></li>
+                    <li>Latest video uploaded: <span id="latest-video-main">--</span></li>
+                    <li>Most active user: <span id="most-active-user-main">--</span></li>
+                </ul>
+            </section>
+
+            <!-- Notifications Section -->
+            <section class="notifications-main">
+                <h3>System Notifications</h3>
+                <ul id="notifications-list-main">
+                    <li>Server maintenance scheduled: <span id="maintenance-date-main">--</span></li>
+                    <li>New flagged content reported: <span id="flagged-content-main">--</span></li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

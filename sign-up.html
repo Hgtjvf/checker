@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PerkView</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+</head>
+
+<body>
+
+    <!----------- Header ----------->
+
+    <header class="header">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="images/logo.png" alt="Brand Logo" class="logo-image">
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="nav-menu">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Categories</a>
+                <a href="#" class="nav-link">Leaderboard</a>
+                <a href="#" class="nav-link">Rewards</a>
+                <a href="upload.html" class="nav-link">Upload Video</a>
+            </nav>
+
+            <!-- Search -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search videos..." class="search-input">
+                <button class="search-button">Search</button>
+            </div>
+
+            <!-- User Options -->
+            <div class="user-options">
+                <a href="sign-in.html">
+                <button class="sign-button" id="signInButton">Sign In / Sign Up</button>
+                </a>
+                <div class="logged-in-state" id="loggedInState" style="display: none;">
+                    <span class="points">Points: 1200</span>
+                    <img src="user-avatar.png" alt="User Avatar" class="avatar-image">
+                </div>
+            </div>
+        </div>
+    </header>
+<!-- Sign-Up Form Container -->
+<div class="container-signup">
+    <h2 class="title-signup">Sign Up</h2>
+    
+    <!-- Form Fields -->
+    <form id="sign-up-form-signup" action="connect.php" method="POST">
+        <!-- Full Name -->
+        <div class="form-group-signup">
+            <label for="full-name-signup">Full Name</label>
+            <input type="text" id="full-name-signup" name="full-name-signup" required>
+        </div>
+
+        <!-- Email Address -->
+        <div class="form-group-signup">
+            <label for="email-signup">Email Address</label>
+            <input type="email" id="email-signup" name="email-signup" required>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group-signup">
+            <label for="password-signup">Password</label>
+            <input type="password" id="password-signup" name="password-signup" required>
+            <small>Minimum 8 characters, at least one uppercase letter</small>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="form-group-signup">
+            <label for="confirm-password-signup">Confirm Password</label>
+            <input type="password" id="confirm-password-signup" name="confirm-password-signup" required>
+        </div>
+
+        <!-- Username -->
+        <div class="form-group-signup">
+            <label for="username-signup">Username</label>
+            <input type="text" id="username-signup" name="username-signup" required>
+            <small>Your unique display name.</small>
+        </div>
+
+        <!-- Referral Code (Optional) -->
+        <div class="form-group-signup">
+            <label for="referral-code-signup">Referral Code</label>
+            <input type="text" id="referral-code-signup" name="referral-code-signup">
+        </div>
+
+        <!-- Agreement Checkbox -->
+        <div class="checkbox-group-signup">
+            <input type="checkbox" id="agree-signup" name="agree-signup" required>
+            <label for="agree-signup">I agree to the Terms of Service and Privacy Policy</label>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="button-signup">Sign Up</button>
+    </form>
+</div>
+
+<!-- Why Sign Up Section -->
+<div class="why-signup">
+    <h2 class="why-title-signup">Why Sign Up?</h2>
+    <div class="benefit-items-signup">
+        <!-- Earn Rewards -->
+        <div class="benefit-item-signup earn-rewards-signup">
+            <i class="fas fa-gift"></i>
+            <h3>Earn Rewards</h3>
+            <p>Start earning points and redeem exciting rewards!</p>
+        </div>
+
+        <!-- Exclusive Content -->
+        <div class="benefit-item-signup exclusive-content-signup">
+            <i class="fas fa-video"></i>
+            <h3>Exclusive Content</h3>
+            <p>Access premium videos and challenges.</p>
+        </div>
+
+        <!-- Leaderboard -->
+        <div class="benefit-item-signup leaderboard-signup">
+            <i class="fas fa-trophy"></i>
+            <h3>Leaderboard</h3>
+            <p>Compete with others and top the charts.</p>
+        </div>
+    </div>
+</div>
+
+
+            <!------------- Footer ------------->
+            <footer class="footer">
+                <div class="footer-container">
+                    <!-- Quick Links -->
+                    <div class="footer-column links-column">
+                        <h3>Quick Links</h3>
+                        <ul class="quick-links">
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#faqs">FAQs</a></li>
+                            <li><a href="#privacy">Privacy Policy</a></li>
+                            <li><a href="#terms">Terms of Service</a></li>
+                        </ul>
+                    </div>
+            
+                    <!-- Newsletter Signup -->
+                    <div class="footer-column newsletter-column">
+                        <h3>Subscribe</h3>
+                        <p>Get updates and exclusive rewards delivered to your inbox.</p>
+                        <input type="email" placeholder="Enter your email" class="newsletter-input">
+                        <button class="newsletter-button">Subscribe</button>
+                    </div>
+                </div>
+            
+                <div class="footer-divider"></div>
+                <p class="footer-text">&copy; <span id="year"></span> PerkView. All Rights Reserved.</p>
+            </footer>
+            
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>

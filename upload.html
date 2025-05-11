@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PerkView - Upload Media</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+</head>
+
+<body>
+
+    <!----------- Header ----------->
+
+    <header class="header">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="images/logo.png" alt="Brand Logo" class="logo-image">
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Categories</a>
+                <a href="#" class="nav-link">Leaderboard</a>
+                <a href="#" class="nav-link">Rewards</a>
+                <a href="#" class="nav-link">Upload Media</a>
+            </nav>
+
+            <!-- Search -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search media..." class="search-input">
+                <button class="search-button">Search</button>
+            </div>
+
+            <!-- User Options -->
+            <div class="user-options">
+                <button class="sign-button" id="signInButton">Sign In / Sign Up</button>
+                <div class="logged-in-state" id="loggedInState" style="display: none;">
+                    <span class="points">Points: 1200</span>
+                    <img src="user-avatar.png" alt="User Avatar" class="avatar-image">
+                </div>
+            </div>
+        </div>
+    </header>
+<!--------------------- Upload Media ---------------------->
+
+<div class="container-upload">
+    <h1 class="title-upload">Upload Your Media</h1>
+    
+    <!-- Media Upload Section -->
+    <div class="form-section-upload">
+        <label for="media-upload">Upload Media</label>
+        <input type="file" id="media-upload" name="media-upload" accept=".mp4, .avi, .jpg, .png, .jpeg">
+        <p class="info-text-upload">Max file size: 1GB. Supported formats: MP4, AVI, JPG, PNG, JPEG.</p>
+    </div>
+
+    <!-- Media Details -->
+    <div class="form-section-upload">
+        <label for="media-title">Title (Max 100 characters)</label>
+        <input type="text" id="media-title" name="media-title" maxlength="100">
+    </div>
+    <div class="form-section-upload">
+        <label for="media-description">Description</label>
+        <textarea id="media-description" name="media-description" rows="4"></textarea>
+    </div>
+    <div class="form-section-upload">
+        <label for="media-tags">Tags</label>
+        <input type="text" id="media-tags" name="media-tags" placeholder="e.g., Nature, Travel, Funny">
+    </div>
+    <div class="form-section-upload">
+        <label for="media-category">Category</label>
+        <select id="media-category" name="media-category" class="category-dropdown-upload">
+            <option value="education">Education</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="tech">Tech</option>
+            <option value="music">Music</option>
+            <option value="sports">Sports</option>
+            <option value="art">Art</option>
+        </select>
+    </div>
+
+    <!-- Additional Features -->
+    <div class="form-section-upload">
+        <label for="media-caption">Caption</label>
+        <textarea id="media-caption" name="media-caption" rows="2" placeholder="Add a catchy caption..."></textarea>
+    </div>
+    <div class="form-section-upload">
+        <label for="tag-users">Tag Users</label>
+        <input type="text" id="tag-users" name="tag-users" placeholder="e.g., @user1, @user2">
+    </div>
+
+    <!-- Visibility and Privacy Settings -->
+    <div class="privacy-settings-upload">
+        <label>Visibility</label>
+        <label><input type="radio" name="visibility" value="public" checked> Public</label>
+        <label><input type="radio" name="visibility" value="followers"> Followers Only</label>
+        <label><input type="radio" name="visibility" value="private"> Private</label>
+        <label><input type="radio" name="visibility" value="custom"> Custom</label>
+        
+        <div class="form-section-upload" id="custom-visibility-upload" style="display: none;">
+            <label for="custom-users">Specify Users</label>
+            <input type="text" id="custom-users" name="custom-users" placeholder="e.g., @user3, @user4">
+        </div>
+
+        <div class="form-section-upload">
+            <label for="age-restriction">Age Restriction</label>
+            <input type="number" id="age-restriction" name="age-restriction" placeholder="Enter minimum age">
+        </div>
+    </div>
+
+    <button type="submit" class="submit-upload">Upload Media</button>
+</div>
+
+<section class="upload-progress-upload">
+    <!-- Progress Bar Section -->
+    <div class="progress-bar-container-upload">
+        <p class="uploading-text-upload">Uploading... <span id="upload-percentage-upload">0%</span></p>
+        <div class="progress-bar-upload">
+            <div id="progress-fill-upload" class="progress-fill-upload"></div>
+        </div>
+    </div>
+
+    <!-- Completion Confirmation Modal -->
+    <div id="completion-modal-upload" class="completion-modal-upload">
+        <div class="modal-content-upload">
+            <h3 class="modal-title-upload">Upload Complete!</h3>
+            <p class="modal-message-upload">Your video has been successfully uploaded.</p>
+            <button id="continue-button-upload" class="continue-button-upload">Go to Dashboard</button>
+        </div>
+    </div>
+</section>
+
+
+    <!------------- Footer ------------->
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Quick Links -->
+            <div class="footer-column links-column">
+                <h3>Quick Links</h3>
+                <ul class="quick-links">
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#faqs">FAQs</a></li>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter Signup -->
+            <div class="footer-column newsletter-column">
+                <h3>Subscribe</h3>
+                <p>Get updates and exclusive rewards delivered to your inbox.</p>
+                <input type="email" placeholder="Enter your email" class="newsletter-input">
+                <button class="newsletter-button">Subscribe</button>
+            </div>
+        </div>
+
+        <div class="footer-divider"></div>
+        <p class="footer-text">&copy; <span id="year"></span> PerkView. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const customVisibility = document.querySelector('#custom-visibility');
+        document.querySelectorAll('input[name="visibility"]').forEach(radio => {
+            radio.addEventListener('change', () => {
+                customVisibility.style.display = radio.value === 'custom' ? 'block' : 'none';
+            });
+        });
+    </script>
+    <script src="script.js" defer></script>
+</body>
+
+</html>

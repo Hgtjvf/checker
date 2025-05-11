@@ -1,0 +1,291 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.admin-main {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar-main {
+    width: 250px;
+    background-color: #40E0D0;
+    padding: 20px;
+    color: white;
+    position: fixed;
+    height: 100%;
+}
+
+.sidebar-header-main h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.sidebar-nav-main ul {
+    list-style: none;
+}
+
+.sidebar-nav-main ul li {
+    margin: 15px 0;
+}
+
+.sidebar-nav-main ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.sidebar-nav-main ul li a:hover {
+    text-decoration: underline;
+}
+
+.main-content-main {
+    margin-left: 250px;
+    padding: 30px;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+/* Quick Stats Section */
+.quick-stats-main {
+    margin-bottom: 30px;
+}
+
+.stats-cards-main {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.stat-card-main {
+    background-color: #ADD8E6;
+    padding: 20px;
+    border-radius: 8px;
+    width: 220px;
+    text-align: center;
+}
+
+.stat-card-main h3 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.stat-card-main p {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Recent Activity Section */
+.recent-activity-main ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.recent-activity-main li {
+    margin-bottom: 10px;
+}
+
+/* Notifications Section */
+.notifications-main ul {
+    list-style: none;
+}
+
+.notifications-main li {
+    margin-bottom: 10px;
+}
+
+/* User Management Section */
+.search-filters-main {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-filters-main input {
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.search-filters-main button {
+    padding: 10px 20px;
+    background-color: #40E0D0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #ADD8E6;
+}
+
+/* Video Management Section */
+.video-filters-main {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.video-filters-main input {
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.video-filters-main button {
+    padding: 10px 20px;
+    background-color: #40E0D0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+/* System Health & Security Section */
+.health-status-main {
+    display: flex;
+    gap: 20px;
+}
+
+.status-card-main {
+    background-color: #ADD8E6;
+    padding: 20px;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+}
+
+.status-card-main h3 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.status-card-main p {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .admin-main {
+        flex-direction: column;
+    }
+
+    .sidebar-main {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .main-content-main {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .stats-cards-main {
+        flex-direction: column;
+    }
+}
+
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.admin-usermanage {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Quick Stats Section */
+.quick-stats-usermanage {
+    margin-bottom: 30px;
+}
+
+.stats-cards-usermanage {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.stat-card-usermanage {
+    background-color: #ADD8E6;
+    padding: 20px;
+    border-radius: 8px;
+    width: 220px;
+    text-align: center;
+}
+
+/* User Filters Section */
+.user-filters-usermanage {
+    margin-bottom: 30px;
+}
+
+.filters-usermanage {
+    display: flex;
+    gap: 10px;
+}
+
+.filters-usermanage input,
+.filters-usermanage select,
+.filters-usermanage button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* User List Section */
+.user-list-usermanage table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.user-list-usermanage th,
+.user-list-usermanage td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.user-list-usermanage th {
+    background-color: #ADD8E6;
+    cursor: pointer;
+}
+
+/* Analytics Section */
+.user-analytics-usermanage {
+    margin-top: 30px;
+}
